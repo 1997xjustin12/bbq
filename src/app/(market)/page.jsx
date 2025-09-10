@@ -221,18 +221,18 @@ const Hero = () => {
               <div className="mr-[100px] max-w-[680px]">
                 <div className="flex flex-col gap-[25px]">
                   <div>
-                    <h1 className="text-white text-shadow-[0_4px_4px_rgba(0,0,0,0.25)] text-[54px] leading-[54px]">
+                    <h1 className="text-white text-shadow-[0_4px_4px_rgba(0,0,0,0.25)] text-[54px] leading-[54px] font-opensans">
                       Where Great Food Meets Great Company
                     </h1>
                   </div>
                   <div>
-                    <p className="text-[28px] leading-[32.2px] text-white font-[300] tracking-[0.84px]">
+                    <p className="text-[28px] leading-[32.2px] text-white font-[300] tracking-[0.84px] font-opensans">
                       Quality grills and tools designed to turn every gathering
                       into a celebration.
                     </p>
                   </div>
                   <div>
-                    <button className="bg-[#FFF] text-[#4D4D4D] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] w-[257px] h-[58px] text-[22px] font-[800] leading-[100%] tracking-[-0.22px]">
+                    <button className="bg-[#FFF] text-[#4D4D4D] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] w-[257px] h-[58px] text-[22px] font-[800] leading-[100%] tracking-[-0.22px] font-opensans">
                       Shop Now
                     </button>
                   </div>

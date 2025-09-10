@@ -88,6 +88,7 @@ export default {
       fontFamily: {
         // montserrat: "var(--font-montserrat)",
         libre: "var(--font-libre-baskerville)",
+        opensans: "var(--font-open-sans)",
       },
     },
   },

@@ -1,8 +1,8 @@
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_BASE_URL;
 export async function generateMetadata() {
-  const title = "Solana Fireplaces | Stylish Indoor & Outdoor Heating";
+  const title = "BBQ Grill Outlet | Premium Grills & Outdoor Living";
   const description =
-    "Transform your home with Solana Fireplaces! Add warmth and style with our wood, gas, and electric designs. Shop now and create your perfect space!";
+    "Elevate your backyard with BBQ Grill Outlet! Discover top-quality grills, outdoor kitchens, and accessories designed to bring flavor and style to every gathering. Shop now and create your perfect outdoor space!";
   try {
     const res = await fetch(`${BASE_URL}/api/favicon`); // Fetch from API
     const data = await res.json();

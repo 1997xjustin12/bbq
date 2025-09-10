@@ -5,67 +5,69 @@ export const redis = new Redis({
   token: process.env.NEXT_UPSTASH_REDIS_REST_TOKEN,
 });
 
+const brand_prefix = "bbqgrilloutlet";
+
 
 export const keys = {
   menu_lists:{
     description: "used to retreive list of menu keys for bigcommerce.",
-    value: "solana_menu_list",
+    value: `${brand_prefix}_menu_list`,
   },
   menu_list_shopify:{
     description: "used to retreive list of menu keys for shopify structure.",
-    value: "solana_shopify_menu_list",
+    value: `${brand_prefix}_shopify_menu_list`,
   },
   default_menu:{
     description:"default menu for bigcommerce product",
-    value:"menu-vwmuqu8jz",
+    value:`menu-vwmuqu8jz`,
   },
   default_shopify_menu:{
     description:"default menu for shopify product",
-    value:"menu-7pajm2g8w",
+    value:`menu-7pajm2g8w`,
   },
   dev_shopify_menu:{
     description:"menu for development environment",
-    value: "menu-5q8vn2rcy",
+    value: `menu-5q8vn2rcy`,
   },
   dev_shopify_menu_v2:{
     description:"menu for development environment v2",
-    value:"menu-2r175z2fj",
+    value:`menu-2r175z2fj`,
   },
   active_menu:{
     description: "used to retreive the key of the active or currently used menu (bigcommerce).",
-    value: "solana_active_menu",
+    value: `${brand_prefix}_active_menu`,
   },
   active_shopify_menu:{
     description: "used to retreive the key of the active or currently used menu (shopify).",
-    value: "solana_shopify_active_menu",
+    value: `${brand_prefix}_shopify_active_menu`,
   },
   logo:{
     description: "used to retreive image_url of the logo",
-    value: "admin_solana_market_logo"
+    value: `admin_${brand_prefix}_market_logo`
   },
   favicon:{
     description: "used to retreive image_url of the favicon",
-    value: "solana_favicon"
+    value: `${brand_prefix}_favicon`,
   },
   theme:{
     description: "used to retreive theme color",
-    value: "solana_theme"
+    value: `${brand_prefix}_theme`
   },
   faqs_about_solana:{
-    description: "section faqs about solana on single product page",
-    value: "solana_faqs_about_solana"
+    description: "section faqs about ${brand_prefix} on single product page",
+    value: `${brand_prefix}_faqs_about_${brand_prefix}`
   },
   faqs_shipping_policy:{
     description: "section faqs shipping policy on single product page",
-    value: "solana_faqs_shipping_policy"
+    value: `${brand_prefix}_faqs_shipping_policy`
   },
   faqs_return_policy:{
     description: "section faqs return policy on single product page",
-    value: "solana_faqs_return_policy"
+    value: `${brand_prefix}_faqs_return_policy`
   },
   faqs_warranty:{
     description: "section faqs warranty on single product page",
-    value: "solana_faqs_warranty"
+    value: `${brand_prefix}_faqs_warranty`
   }
 }
 

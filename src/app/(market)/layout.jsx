@@ -1,6 +1,6 @@
 import "@/app/globals.css";
 import { redis, keys, redisGet } from "@/app/lib/redis";
-import { Inter, Libre_Baskerville } from "next/font/google";
+import { Libre_Baskerville, Open_Sans } from "next/font/google";
 // import localFont from "next/font/local";
 import FixedHeader from "@/app/components/template/fixed_header";
 // import TuiNavBar from "@/app/components/template/tui_navbar"; // uncomment for bigcommerce structure
@@ -17,11 +17,11 @@ import SessionWrapper from "@/app/components/wrapper/SessionWrapper"; // 👈 Yo
 import ExtrasHeader from "@/app/components/atom/ExtrasHeader"
 const shopify = true; // if shopify product structure
 
-const InterFont = Inter({
+const OpenSansFont = Open_Sans({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-open-sans",
 });
 
 const libreBaskerville = Libre_Baskerville({
@@ -43,7 +43,7 @@ export default async function MarketLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`antialiased ${InterFont.className} ${libreBaskerville.variable} theme-${color}`}
+        className={`antialiased ${OpenSansFont.className} ${libreBaskerville.variable} theme-${color}`}
       >
         <FreeShippingBanner />
         <ExtrasHeader />

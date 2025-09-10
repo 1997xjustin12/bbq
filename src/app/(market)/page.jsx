@@ -19,11 +19,6 @@ import CollectionCarousel from "@/app/components/atom/CollectionCarousel";
 import { keys, redis } from "@/app/lib/redis";
 import { BASE_URL, createSlug } from "@/app/lib/helpers";
 // CONSTANTS
-export const metadata = {
-  title: "Shop Outdoor Kitchen Equipment | Solana BBQ Grills",
-  description:
-    "Upgrade your backyard with premium outdoor kitchen equipment from Solana BBQ Grills. Best prices on grills, burners, and accessories. Shop now!",
-};
 const defaultMenuKey = keys.dev_shopify_menu.value;
 const feat_carousel_items = [
   {

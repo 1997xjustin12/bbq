@@ -252,7 +252,7 @@ const ShopAllGrills = async () => {
     );
 
     if (!res.ok) {
-      throw new Error(`Failed to fetch collection ${id}`);
+      console.log(`Failed to fetch collection ${collection_id}`);
     }
 
     return res.json();
@@ -345,8 +345,10 @@ const ShopAllGrills = async () => {
               <div className="text-3xl italic font-semibold __className_b1512a">
                 Gas Grills and Smokers
               </div>
-              <div className="flex gap-[30px] mt-5 min-h-[230px]">
+              {/* <div className="flex gap-[30px] mt-5 min-h-[230px]">
                 {items &&
+                  Array.isArray(items) &&
+                  items?.length > 0 &&
                   items
                     .slice(0, max_product_display)
                     .map((item, idx) => (
@@ -355,6 +357,12 @@ const ShopAllGrills = async () => {
                         item={item}
                       />
                     ))}
+              </div> */}
+
+              <div className="mt-5 flex items-center justify-center min-h-[230px]">
+                <div className="p-[20px] text-neutral-500 font-bold text-lg">
+                  [COLLECTION FOR THIS SECTION IS NOT READY]
+                </div>
               </div>
               <div className="flex mt-5 items-center justify-end">
                 <Link
@@ -371,9 +379,9 @@ const ShopAllGrills = async () => {
         <div className="lg:hidden">
           <SectionHeader text="Shop All Grills" />
           <div className="flex flex-col gap-[30px] mt-5">
-            <div className=" w-full flex flex-wrap gap-5">
+            {/* <div className=" w-full flex flex-wrap gap-5">
               <YmalCarousel breakpoints={items_per_break_point}>
-                {items &&
+                {items && Array.isArray(items) && items?.length > 0 &&
                   items.map((item, idx) => (
                     <div
                       key={`product-cart-to-cart-item-${idx}`}
@@ -383,6 +391,11 @@ const ShopAllGrills = async () => {
                     </div>
                   ))}
               </YmalCarousel>
+            </div> */}
+            <div className="mt-5 flex items-center justify-center min-h-[230px]">
+              <div className="p-[20px] text-neutral-500 font-bold text-lg">
+                [COLLECTION FOR THIS SECTION IS NOT READY]
+              </div>
             </div>
             <div className="flex justify-center">
               <Link
@@ -411,8 +424,14 @@ const ShopAllOpenBox = async () => {
           Save big on like-new items that have been opened, inspected, and
           approved for resale. Same great quality, just a better price.
         </div>
-        <div className="mt-5">
+        {/* <div className="mt-5">
           <CollectionCarouselWrap data={{ id: collection_id }} />
+        </div> */}
+        {/* collection used in this section was deleted */}
+        <div className="mt-5 flex items-center justify-center min-h-[230px]">
+          <div className="p-[20px] text-neutral-500 font-bold text-lg">
+            [COLLECTION FOR THIS SECTION IS NOT READY]
+          </div>
         </div>
         <div className="mt-5 flex items-center justify-center">
           <Link
@@ -505,7 +524,7 @@ const TopBrandsCarousel = () => {
       url: `${BASE_URL}/aog`,
     },
     {
-      name: "Bull Outdoor Products",     
+      name: "Bull Outdoor Products",
       image: "/images/feature/bull-outdoor-products-logo.webp",
       url: `${BASE_URL}/bull-outdoor-products`,
     },
@@ -539,12 +558,18 @@ const TopBrandsCarousel = () => {
       <h2 className="text-xl md:text-4xl text-[30px] font-normal underline italic font-libre">
         Our Top Brands
       </h2>
-      <CollectionCarousel breakpoints={items_per_break_point}  settings={{autoplay:true, dots:true}}>
+      <CollectionCarousel
+        breakpoints={items_per_break_point}
+        settings={{ autoplay: true, dots: true }}
+      >
         {brands &&
           Array.isArray(brands) &&
           brands.map((brand) => (
-            <Link prefetch={false} href={brand?.url || "#"} key={`brand-${createSlug(brand?.name)}`}
-            className="relative aspect-1 flex items-center"
+            <Link
+              prefetch={false}
+              href={brand?.url || "#"}
+              key={`brand-${createSlug(brand?.name)}`}
+              className="relative aspect-1 flex items-center"
             >
               {brand?.image && (
                 <Image

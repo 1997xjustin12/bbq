@@ -12,13 +12,18 @@ export async function getCollectionProducts(id) {
   );
 
   if (!res.ok) {
-    throw new Error("Failed to fetch collection products");
+    // throw new Error("Failed to fetch collection products");
+    return false;
   }
 
   return res.json();
 }
 async function CollectionCarouselWrap({ data }) {
+  if(!data?.id) return;
+
   const collection = await getCollectionProducts(data?.id);
+
+  if(collection) return "Nothing to display";
 
   const items_per_break_point = [
     { minWidth: 0, value: 1 },
